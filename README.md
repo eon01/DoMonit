@@ -205,11 +205,11 @@ e3a7066ba9534a53bbbf38248688c15c84e2839bac6df637d515f7f5c2383c5b
 #Same output as ps aux in *nix
 {u'Processes': [[u'root', u'3137', u'0.0', u'0.1', u'76768', u'14532', u'?', u'Ss', u'11:54', u'0:04', u'/usr/local/bin/python2 /usr/local/bin/gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0'], [u'root', u'3446', u'0.0', u'0.2', u'88556', u'18724', u'?', u'S', u'11:54', u'0:00', u'/usr/local/bin/python2 /usr/local/bin/gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0'], [u'root', u'3447', u'0.0', u'0.2', u'88552', u'18620', u'?', u'S', u'11:54', u'0:00', u'/usr/local/bin/python2 /usr/local/bin/gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0'], [u'root', u'3449', u'0.0', u'0.2', u'88552', u'18880', u'?', u'S', u'11:54', u'0:00', u'/usr/local/bin/python2 /usr/local/bin/gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0'], [u'root', u'3463', u'0.0', u'0.2', u'88556', u'18780', u'?', u'S', u'11:54', u'0:00', u'/usr/local/bin/python2 /usr/local/bin/gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0']], u'Titles': [u'USER', u'PID', u'%CPU', u'%MEM', u'VSZ', u'RSS', u'TTY', u'STAT', u'START', u'TIME', u'COMMAND']}
 ```
-<<<<<<< HEAD
+
 
 # ToDo
 - Documentation
 - Exception & timeout handling
 
-=======
->>>>>>> b8b2785a2377c5b0ac0eaf66a435976641a5a002
+
+
