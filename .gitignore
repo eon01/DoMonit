@@ -88,6 +88,12 @@ ENV/
 # Rope project settings
 .ropeproject
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+# Specefic
+domonit_init.py
+>>>>>>> b8b2785a2377c5b0ac0eaf66a435976641a5a002
 =======
 
 # Specefic
