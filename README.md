@@ -1,6 +1,7 @@
 # DoMonit
 
 A deadly simple monitoring tool for Docker - Using A Python Wrapper For Docker API.
+[The Blog Post](https://medium.com/@eon01/monitoring-docker-with-python-domonit-34440b8c6830)
 
 # Compatibility
 
