@@ -1,9 +1,16 @@
 # DoMonit
-Monitoring Docker Using A Python Wrapper For Docker API 
 
-A Python wrapper for Dokcer API 1.24 compatible with Docker 1.12.x
+A deadly simple monitoring tool for Docker - Using A Python Wrapper For Docker API 
+
+# Compatibility
+
+A Python wrapper for Dokcer API 1.24 compatible with Docker 1.12.x and later.
+
+# Purpose 
 
 The purpose is to write python scripts easily for monitoring all of your Docker containers (running in a Linux distibution - other OS are coming soon in the roadmap of development).
+
+# The Wrapper
 
 The wrapper contains these classes:
 
@@ -36,8 +43,20 @@ Where :
 
 # Example
 
+Create a virtual environement 
+```
+virtualenv domonit
+cd domonit 
+. bin/activate
+git clone https://github.com/eon01/DoMonit.git
+cd DoMonit
+pip install -r requirements.txt
+python examples.py
 ```
 
+This is the example script:
+
+```
 from api.containers import Containers
 from api.ids import Ids
 from api.inspect import Inspect
