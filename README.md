@@ -1,6 +1,6 @@
 # DoMonit
 
-A deadly simple monitoring tool for Docker - Using A Python Wrapper For Docker API 
+A deadly simple monitoring tool for Docker - Using A Python Wrapper For Docker API.
 
 # Compatibility
 
@@ -11,6 +11,8 @@ A Python wrapper for Dokcer API 1.24 compatible with Docker 1.12.x and later.
 The purpose is to write python scripts easily for monitoring all of your Docker containers (running in a Linux distibution - other OS are coming soon in the roadmap of development).
 
 # The Wrapper
+
+This is the Alpha, moving to Beta very very soon :-)
 
 The wrapper contains these classes:
 
