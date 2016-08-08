@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/eon01/DoMonit.svg?branch=master)](https://travis-ci.org/eon01/DoMonit)
 # DoMonit
 
 A deadly simple monitoring tool for Docker - Using A Python Wrapper For Docker API.
