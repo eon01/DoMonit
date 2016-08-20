@@ -1050,7 +1050,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["RestartCount"]) ) 
 
-    def error(self):
+    def state_error(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1059,7 +1059,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Error"]) ) 
 
-    def exit_code(self):
+    def state_exit_code(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1068,7 +1068,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["ExitCode"]) ) 
  
-    def finished_at(self):
+    def state_finished_at(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1077,7 +1077,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["FinishedAt"]) ) 
  
-    def oom_killed(self):
+    def state_oom_killed(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1086,7 +1086,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["OOMKilled"]) ) 
  
-    def dead(self):
+    def state_dead(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1095,7 +1095,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Dead"]) ) 
  
-    def paused(self):
+    def state_paused(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1104,7 +1104,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Paused"]) ) 
  
-    def pid(self):
+    def state_pid(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1113,7 +1113,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Pid"]) ) 
  
-    def restarting(self):
+    def state_restarting(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1122,7 +1122,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Restarting"]) ) 
  
-    def running(self):
+    def state_running(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1131,7 +1131,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["Running"]) ) 
  
-    def started_at(self):
+    def state_started_at(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
@@ -1140,7 +1140,7 @@ class Inspect():
          respj = self.resp.json()      
          return( '{}'.format( respj["State"]["StartedAt"]) ) 
   
-    def status(self):
+    def state_status(self):
          resp = self.resp
          if resp.status_code == 404:
             raise NoSuchContainerError('GET ' + self.url + ' {} '.format(resp.status_code)) 
