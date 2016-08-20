@@ -56,18 +56,6 @@ pip install -r requirements.txt
 #To Test:
 python examples.py
 ```
-# Example
-
-Create a virtual environement 
-```
-virtualenv domonit
-cd domonit 
-. bin/activate
-git clone https://github.com/eon01/DoMonit.git
-cd DoMonit
-pip install -r requirements.txt
-python examples.py
-```
 
 # Example
 
