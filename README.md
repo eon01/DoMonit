@@ -392,6 +392,37 @@ def host_config_restart_policy_name():
     },
 ```
 
+# How To Contribute
+- Submit a feature proposal if you have new features to add. If you fixing a bug, this step is optional
+- Fork the repo and then clone it to your development machine
+
+```
+git clone https://github.com/eon01/DoMonit.git
+```
+- Create a new branch
+```
+git checkout -b my-new-feature
+```
+- Add your code 
+- Follow the code style and naming conventions
+- Write some documentations and tests
+- Commit your changes and push the new branch to your fork
+```
+git add .
+git commit -m 'Your detailed description'
+git push origin my-new-feature
+```
+- Submit a pull request
+- You can get a list of your commits:
+```
+git log --oneline origin/master..my-new-feature
+```
+- If accepted and merged, delete your branch (remotly and locally)
+```
+git checkout master
+git push origin :my-new-feature
+git branch -D my-new-feature
+```
 
 # ToDo
 - Documentation
