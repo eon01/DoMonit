@@ -594,7 +594,9 @@ class Stats():
         return ('{}'.format( respj["blkio_stats"] ) )
 
     # CPU
-    def cpu_stats(self):
+
+    # CPU
+    def cpu_stats_cpu_stats(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -605,7 +607,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"] ) )
 
-    def usage_in_usermode(self):
+    def cpu_stats_usage_in_usermode(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -616,7 +618,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["usage_in_usermode"] ) )
 
-    def total_usage(self):
+    def cpu_stats_total_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -627,7 +629,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["total_usage"] ) )
 
-    def percpu_usage(self):
+    def cpu_stats_percpu_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -638,7 +640,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["percpu_usage"] ) )
 
-    def usage_in_kernelmode(self):
+    def cpu_stats_usage_in_kernelmode(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -649,7 +651,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["usage_in_kernelmode"] ) )
 
-    def system_cpu_usage(self):
+    def cpu_stats_system_cpu_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -660,7 +662,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["system_cpu_usage"] ) )
 
-    def throttling_data(self):
+    def cpu_stats_throttling_data(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -671,7 +673,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["throttling_data"] ) )
 
-    def period(self):
+    def cpu_stats_period(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -682,7 +684,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["periods"] ) )
 
-    def throttled_periods(self):
+    def cpu_stats_throttled_periods(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -693,7 +695,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["throttled_periods"] ) )
 
-    def throttled_time(self):
+    def cpu_stats_throttled_time(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -703,6 +705,7 @@ class Stats():
 
         respj = self.resp.json()
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["throttled_time"] ) )
+
 
     # Per CPU
     def percpu_stats(self):
