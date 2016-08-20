@@ -417,7 +417,7 @@ git push origin my-new-feature
 ```
 git log --oneline origin/master..my-new-feature
 ```
-- If accepted and merged, delete your branch (remotly and locally)
+- It is optional but if accepted and merged, you can delete your branch (remotly and locally)
 ```
 git checkout master
 git push origin :my-new-feature
