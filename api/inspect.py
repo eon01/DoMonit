@@ -290,7 +290,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["ExecIds"]) ) 
 
-    def binds(self):
+    def host_config_binds(self):
         resp = self.resp
         url = self.url
 
@@ -300,7 +300,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Binds"]) ) 
 
-    def maximum_iops(self):
+    def host_config_maximum_iops(self):
         resp = self.resp
         url = self.url
 
@@ -310,7 +310,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["MaximumIOps"]) ) 
 
-    def maximum_iobps(self):
+    def host_config_maximum_iobps(self):
         resp = self.resp
         url = self.url
 
@@ -320,7 +320,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["MaximumIOBps"]) ) 
 
-    def blkio_weight_device(self):
+    def host_config_blkio_weight_device(self):
         resp = self.resp
         url = self.url
 
@@ -330,7 +330,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["BlkioWeightDevice"]) ) 
 
-    def blkio_device_read_bps(self):
+    def host_config_blkio_device_read_bps(self):
         resp = self.resp
         url = self.url
 
@@ -340,7 +340,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["BlkioDeviceReadBps"]) ) 
 
-    def blkio_device_write_bps(self):
+    def host_config_blkio_device_write_bps(self):
         resp = self.resp
         url = self.url
 
@@ -350,7 +350,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["BlkioDeviceWriteBps"]) ) 
 
-    def blkio_device_write_iops(self):
+    def host_config_blkio_device_write_iops(self):
         resp = self.resp
         url = self.url
 
@@ -360,7 +360,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["BlkioDeviceWriteIOps"]) ) 
 
-    def cap_add(self):
+    def host_config_cap_add(self):
         resp = self.resp
         url = self.url
 
@@ -370,7 +370,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CapAdd"]) ) 
 
-    def cap_drop(self):
+    def host_config_cap_drop(self):
         resp = self.resp
         url = self.url
 
@@ -380,7 +380,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CapDrop"]) ) 
 
-    def container_id_file(self):
+    def host_config_container_id_file(self):
         resp = self.resp
         url = self.url
 
@@ -390,7 +390,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["ContainerIDFile"]) ) 
 
-    def cpuset_cpus(self):
+    def host_config_cpuset_cpus(self):
         resp = self.resp
         url = self.url
 
@@ -400,7 +400,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CpusetCpus"]) ) 
 
-    def cpuset_mems(self):
+    def host_config_cpuset_mems(self):
         resp = self.resp
         url = self.url
 
@@ -410,7 +410,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CpusetMems"]) ) 
 
-    def cpu_percent(self):
+    def host_config_cpu_percent(self):
         resp = self.resp
         url = self.url
 
@@ -420,7 +420,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CpuPercent"]) ) 
 
-    def cpu_shares(self):
+    def host_config_cpu_shares(self):
         resp = self.resp
         url = self.url
 
@@ -430,7 +430,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CpuShares"]) ) 
 
-    def cpu_period(self):
+    def host_config_cpu_period(self):
         resp = self.resp
         url = self.url
 
@@ -440,7 +440,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["CpuPeriod"]) ) 
 
-    def devices(self):
+    def host_config_devices(self):
         resp = self.resp
         url = self.url
 
@@ -450,7 +450,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Devices"]) ) 
 
-    def dns(self):
+    def host_config_dns(self):
         resp = self.resp
         url = self.url
 
@@ -460,7 +460,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Dns"]) ) 
 
-    def dns_options(self):
+    def host_config_dns_options(self):
         resp = self.resp
         url = self.url
 
@@ -470,7 +470,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["DnsOptions"]) ) 
 
-    def dns_search(self):
+    def host_config_dns_search(self):
         resp = self.resp
         url = self.url
 
@@ -480,7 +480,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["DnsSearch"]) ) 
 
-    def extra_hosts(self):
+    def host_config_extra_hosts(self):
         resp = self.resp
         url = self.url
 
@@ -490,7 +490,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["ExtraHosts"]) ) 
 
-    def ipc_mode(self):
+    def host_config_ipc_mode(self):
         resp = self.resp
         url = self.url
 
@@ -500,7 +500,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["IpcMode"]) ) 
 
-    def links(self):
+    def host_config_links(self):
         resp = self.resp
         url = self.url
 
@@ -510,7 +510,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Links"]) ) 
 
-    def lxc_conf(self):
+    def host_config_lxc_conf(self):
         resp = self.resp
         url = self.url
 
@@ -520,7 +520,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["LxcConf"]) ) 
 
-    def memory(self):
+    def host_config_memory(self):
         resp = self.resp
         url = self.url
 
@@ -530,7 +530,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Memory"]) ) 
 
-    def memory_swap(self):
+    def host_config_memory_swap(self):
         resp = self.resp
         url = self.url
 
@@ -540,7 +540,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["DnsOptions"]) ) 
 
-    def memory_reservation(self):
+    def host_config_memory_reservation(self):
         resp = self.resp
         url = self.url
 
@@ -550,7 +550,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["MemoryReservation"]) ) 
 
-    def kernel_memory(self):
+    def host_config_kernel_memory(self):
         resp = self.resp
         url = self.url
 
@@ -560,7 +560,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["KernelMemory"]) ) 
 
-    def oom_kill_disable(self):
+    def host_config_oom_kill_disable(self):
         resp = self.resp
         url = self.url
 
@@ -570,7 +570,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["OomKillDisable"]) ) 
 
-    def oom_score_adj(self):
+    def host_config_oom_score_adj(self):
         resp = self.resp
         url = self.url
 
@@ -580,7 +580,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["OomScoreAdj"]) ) 
 
-    def network_mode(self):
+    def host_config_network_mode(self):
         resp = self.resp
         url = self.url
 
@@ -590,7 +590,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["NetworkMode"]) ) 
 
-    def pid_mode(self):
+    def host_config_pid_mode(self):
         resp = self.resp
         url = self.url
 
@@ -600,7 +600,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["PidMode"]) ) 
 
-    def port_bindings(self):
+    def host_config_port_bindings(self):
         resp = self.resp
         url = self.url
 
@@ -610,7 +610,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["PortBindings"]) ) 
 
-    def privileged(self):
+    def host_config_privileged(self):
         resp = self.resp
         url = self.url
 
@@ -620,7 +620,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Privileged"]) )
 
-    def readonly_rootfs(self):
+    def host_config_readonly_rootfs(self):
         resp = self.resp
         url = self.url
 
@@ -630,7 +630,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["ReadonlyRootfs"]) ) 
 
-    def publish_all_ports(self):
+    def host_config_publish_all_ports(self):
         resp = self.resp
         url = self.url
 
@@ -640,7 +640,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["PublishAllPorts"]) ) 
 
-    def restart_policy_maximum_retry_count(self):
+    def host_config_restart_policy_maximum_retry_count(self):
         resp = self.resp
         url = self.url
 
@@ -650,7 +650,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["RestartPolicy"]["MaximumRetryCount"]) ) 
 
-    def restart_policy_name(self):
+    def host_config_restart_policy_name(self):
         resp = self.resp
         url = self.url
 
@@ -660,7 +660,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["RestartPolicy"]["Name"]) ) 
 
-    def log_config_config(self):
+    def host_config_log_config_config(self):
         resp = self.resp
         url = self.url
 
@@ -670,7 +670,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["LogConfig"]["Config"]) ) 
 
-    def log_config_type(self):
+    def host_config_log_config_type(self):
         resp = self.resp
         url = self.url
 
@@ -680,7 +680,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["LogConfig"]["Type"]) ) 
 
-    def security_opt(self):
+    def host_config_security_opt(self):
         resp = self.resp
         url = self.url
 
@@ -690,7 +690,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["SecurityOpt"]) ) 
 
-    def sysctls(self):
+    def host_config_sysctls(self):
         resp = self.resp
         url = self.url
 
@@ -700,7 +700,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Sysctls"]) ) 
 
-    def storage_opt(self):
+    def host_config_storage_opt(self):
         resp = self.resp
         url = self.url
 
@@ -710,7 +710,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["StorageOpt"]) ) 
 
-    def volumes_from(self):
+    def host_config_volumes_from(self):
         resp = self.resp
         url = self.url
 
@@ -720,7 +720,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["VolumesFrom"]) ) 
 
-    def ulimits(self):
+    def host_config_ulimits(self):
         resp = self.resp
         url = self.url
 
@@ -730,7 +730,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["HostConfig"]["Ulimits"]) ) 
 
-    def volume_driver(self):
+    def host_config_volume_driver(self):
         resp = self.resp
         url = self.url
 
@@ -738,9 +738,9 @@ class Inspect():
         u.check_resp(resp_status_code, url)
           
         respj = self.resp.json()      
-        return( '{}'.format( respj["hostconfig"]["VolumeDriver"]) ) 
+        return( '{}'.format( respj["HostConfig"]["VolumeDriver"]) ) 
 
-    def volume_driver(self):
+    def host_config_volume_driver(self):
         resp = self.resp
         url = self.url
 
@@ -748,9 +748,9 @@ class Inspect():
         u.check_resp(resp_status_code, url)
           
         respj = self.resp.json()      
-        return( '{}'.format( respj["hostconfig"]["VolumeDriver"]) ) 
+        return( '{}'.format( respj["HostConfig"]["VolumeDriver"]) ) 
 
-    def shm_size(self):
+    def host_config_host_config_shm_size(self):
         resp = self.resp
         url = self.url
 
@@ -758,7 +758,7 @@ class Inspect():
         u.check_resp(resp_status_code, url)
           
         respj = self.resp.json()      
-        return( '{}'.format( respj["hostconfig"]["ShmSize"]) ) 
+        return( '{}'.format( respj["HostConfig"]["ShmSize"]) ) 
 
     def hostname_path(self):
         resp = self.resp
