@@ -830,7 +830,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["Name"]) ) 
 
-    def bridge(self):
+    def network_settings_bridge(self):
         resp = self.resp
         url = self.url
 
@@ -840,7 +840,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["Bridge"]) ) 
 
-    def sandbox_id(self):
+    def network_settings_sandbox_id(self):
         resp = self.resp
         url = self.url
 
@@ -850,7 +850,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["SandboxID"]) ) 
 
-    def hairpin_mode(self):
+    def network_settings_hairpin_mode(self):
         resp = self.resp
         url = self.url
 
@@ -860,7 +860,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["HairpinMode"]) ) 
 
-    def link_local_ipv6_address(self):
+    def network_settings_link_local_ipv6_address(self):
         resp = self.resp
         url = self.url
 
@@ -870,7 +870,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["LinkLocalIPv6Address"]) ) 
 
-    def link_local_ipv6_prefix_len(self):
+    def network_settings_link_local_ipv6_prefix_len(self):
         resp = self.resp
         url = self.url
 
@@ -880,7 +880,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["LinkLocalIPv6PrefixLen"]) ) 
 
-    def ports(self):
+    def network_settings_ports(self):
         resp = self.resp
         url = self.url
 
@@ -890,7 +890,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["Ports"]) ) 
 
-    def sandbox_key(self):
+    def network_settings_sandbox_key(self):
         resp = self.resp
         url = self.url
 
@@ -900,7 +900,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["SandboxKey"]) ) 
 
-    def secondary_ip_addresses(self):
+    def network_settings_secondary_ip_addresses(self):
         resp = self.resp
         url = self.url
 
@@ -910,7 +910,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["SecondaryIPAddresses"]) ) 
 
-    def secondary_ipv6_addresses(self):
+    def network_settings_secondary_ipv6_addresses(self):
         resp = self.resp
         url = self.url
 
@@ -920,7 +920,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["SecondaryIPv6Addresses"]) ) 
 
-    def endpoint_id(self):
+    def network_settings_endpoint_id(self):
         resp = self.resp
         url = self.url
 
@@ -930,7 +930,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["EndpointID"]) ) 
 
-    def gateway(self):
+    def network_settings_gateway(self):
         resp = self.resp
         url = self.url
 
@@ -940,7 +940,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["Gateway"]) ) 
 
-    def global_ipv6_address(self):
+    def network_settings_global_ipv6_address(self):
         resp = self.resp
         url = self.url
 
@@ -950,7 +950,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["GlobalIPv6Address"]) ) 
 
-    def global_ipv6_prefixLen(self):
+    def network_settings_global_ipv6_prefixLen(self):
         resp = self.resp
         url = self.url
 
@@ -960,7 +960,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["GlobalIPv6PrefixLen"]) ) 
 
-    def ip_address(self):
+    def network_settings_ip_address(self):
         resp = self.resp
         url = self.url
 
@@ -970,7 +970,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["IPAddress"]) ) 
 
-    def ip_prefixLen(self):
+    def network_settings_ip_prefixLen(self):
         resp = self.resp
         url = self.url
 
@@ -980,7 +980,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["IPPrefixLen"]) ) 
 
-    def ipv6_gateway(self):
+    def network_settings_ipv6_gateway(self):
         resp = self.resp
         url = self.url
 
@@ -990,7 +990,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["IPv6Gateway"]) ) 
 
-    def mac_address(self):
+    def network_settings_mac_address(self):
         resp = self.resp
         url = self.url
 
@@ -1000,7 +1000,7 @@ class Inspect():
         respj = self.resp.json()      
         return( '{}'.format( respj["NetworkSettings"]["MacAddress"]) ) 
 
-    def networks(self):
+    def network_settings_networks(self):
         resp = self.resp
         url = self.url
 
