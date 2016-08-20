@@ -154,6 +154,43 @@ Number of containers is : 5
 ...etc
 ```
 
+# DoMonit Functions
+
+For better uderstanfing and visibility, I used Python ```dir()``` here to list the different functions of every class under ```api/*```
+
+```
+python dir.py
+
+Containers()
+['__doc__', '__init__', '__module__', 'base', 'command', 'containers', 'created', 'host_config', 'image', 'image_id', 'labels', 'mounts', 'names', 'network_settings', 'ports', 'resp', 'session', 'status', 'url']
+
+
+Ids()
+['__doc__', '__init__', '__module__', 'base', 'ids', 'resp', 'session', 'url']
+
+
+Inspect()
+['__doc__', '__init__', '__module__', 'app_armor_profile', 'args', 'attach_stderr', 'attach_stdin', 'base', 'cmd', 'container_id', 'created', 'domainname', 'driver', 'entrypoint', 'env', 'exec_ids', 'exposed_ports', 'host_config_binds', 'host_config_blkio_device_read_bps', 'host_config_blkio_device_write_bps', 'host_config_blkio_device_write_iops', 'host_config_blkio_weight_device', 'host_config_cap_add', 'host_config_cap_drop', 'host_config_container_id_file', 'host_config_cpu_percent', 'host_config_cpu_period', 'host_config_cpu_shares', 'host_config_cpuset_cpus', 'host_config_cpuset_mems', 'host_config_devices', 'host_config_dns', 'host_config_dns_options', 'host_config_dns_search', 'host_config_extra_hosts', 'host_config_host_config_shm_size', 'host_config_ipc_mode', 'host_config_kernel_memory', 'host_config_links', 'host_config_log_config_config', 'host_config_log_config_type', 'host_config_lxc_conf', 'host_config_maximum_iobps', 'host_config_maximum_iops', 'host_config_memory', 'host_config_memory_reservation', 'host_config_memory_swap', 'host_config_network_mode', 'host_config_oom_kill_disable', 'host_config_oom_score_adj', 'host_config_pid_mode', 'host_config_port_bindings', 'host_config_privileged', 'host_config_publish_all_ports', 'host_config_readonly_rootfs', 'host_config_restart_policy_maximum_retry_count', 'host_config_restart_policy_name', 'host_config_security_opt', 'host_config_storage_opt', 'host_config_sysctls', 'host_config_ulimits', 'host_config_volume_driver', 'host_config_volumes_from', 'hostname', 'hostname_path', 'hosts_path', 'id', 'image', 'inspect', 'labels', 'log_path', 'mac_address', 'mount_label', 'mounts', 'name', 'network_disabled', 'network_settings_bridge', 'network_settings_endpoint_id', 'network_settings_gateway', 'network_settings_global_ipv6_address', 'network_settings_global_ipv6_prefixLen', 'network_settings_hairpin_mode', 'network_settings_ip_address', 'network_settings_ip_prefixLen', 'network_settings_ipv6_gateway', 'network_settings_link_local_ipv6_address', 'network_settings_link_local_ipv6_prefix_len', 'network_settings_mac_address', 'network_settings_networks', 'network_settings_ports', 'network_settings_sandbox_id', 'network_settings_sandbox_key', 'network_settings_secondary_ip_addresses', 'network_settings_secondary_ipv6_addresses', 'on_build', 'open_stdin', 'path', 'process_label', 'resolv_conf_path', 'resp', 'restart_count', 'session', 'state_dead', 'state_error', 'state_exit_code', 'state_finished_at', 'state_oom_killed', 'state_paused', 'state_pid', 'state_restarting', 'state_running', 'state_started_at', 'state_status', 'stdin_once', 'stop_signal', 'tty', 'url', 'user', 'volumes', 'working_dir']
+
+
+Stats()
+['__doc__', '__init__', '__module__', 'active_anon', 'active_file', 'base', 'blkio_stats', 'cache', 'container_id', 'cpu_stats', 'failcnt', 'hierarchical_memory_limit', 'inactive_anon', 'inactive_file', 'interfaces', 'limit', 'mapped_file', 'max_usage', 'memory_stats', 'networks', 'percpu_percpu_usage', 'percpu_period', 'percpu_stats', 'percpu_system_cpu_usage', 'percpu_throttled_periods', 'percpu_throttled_time', 'percpu_throttling_data', 'percpu_total_usage', 'percpu_usage', 'percpu_usage_in_kernelmode', 'percpu_usage_in_usermode', 'period', 'pgfault', 'pgmajfault', 'pgpgin', 'pgpgout', 'pids_stats_current', 'read', 'resp', 'rss', 'rss_huge', 'rx_bytes', 'rx_dropped', 'rx_errors', 'rx_packets', 'session', 'stats', 'stream', 'system_cpu_usage', 'throttled_periods', 'throttled_time', 'throttling_data', 'total_active_anon', 'total_active_file', 'total_cache', 'total_inactive_anon', 'total_inactive_file', 'total_mapped_file', 'total_pgfault', 'total_pgmajfault', 'total_pgpgin', 'total_pgpgout', 'total_rss', 'total_rss_huge', 'total_unevictable', 'total_usage', 'total_writeback', 'tx_bytes', 'tx_dropped', 'tx_errors', 'tx_packets', 'unevictable', 'url', 'usage', 'usage_in_kernelmode', 'usage_in_usermode', 'writeback']
+
+
+Process()
+['__doc__', '__init__', '__module__', 'base', 'container_id', 'processes', 'ps', 'ps_args', 'resp', 'session', 'titles', 'url']
+
+
+Logs()
+['__doc__', '__init__', '__module__', 'base', 'container_id', 'details', 'follow', 'logs', 'resp', 'session', 'since', 'stderr', 'stdout', 'tail', 'timestamps', 'url']
+
+
+Changes()
+['__doc__', '__init__', '__module__', 'base', 'changes', 'container_id', 'resp', 'session', 'url']
+
+```
+
+
 # Naming Conventions
 
 Let's take the example of the "inspect" call.
