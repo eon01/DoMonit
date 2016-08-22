@@ -593,7 +593,6 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["blkio_stats"] ) )
 
-    # CPU
 
     # CPU
     def cpu_stats_cpu_stats(self):
@@ -608,6 +607,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"] ) )
 
     def cpu_stats_usage_in_usermode(self):
+	"""
+	Time spent by tasks of the cgroup in user mode. Units: nanoseconds.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -619,6 +621,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["usage_in_usermode"] ) )
 
     def cpu_stats_total_usage(self):
+	"""
+	Total CPU time consumed. Units: nanoseconds.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -630,6 +635,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["total_usage"] ) )
 
     def cpu_stats_percpu_usage(self):
+	"""
+	Total CPU time consumed per core. Units: nanoseconds.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -641,6 +649,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["percpu_usage"] ) )
 
     def cpu_stats_usage_in_kernelmode(self):
+	"""
+	Time spent by tasks of the cgroup in kernel mode. Units: nanoseconds.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -652,6 +663,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["cpu_usage"]["usage_in_kernelmode"] ) )
 
     def cpu_stats_system_cpu_usage(self):
+        """
+        returns the host''s cumulative CPU usage (for user, system, idle, etc) in nanoseconds
+        """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -674,6 +688,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["throttling_data"] ) )
 
     def cpu_stats_period(self):
+	"""
+	Number of periods with throttling active
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -685,6 +702,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["periods"] ) )
 
     def cpu_stats_throttled_periods(self):
+	"""
+	Number of periods when the container hits its throttling limit.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -696,6 +716,9 @@ class Stats():
         return ('{}'.format( respj["cpu_stats"]["throttling_data"]["throttled_periods"] ) )
 
     def cpu_stats_throttled_time(self):
+	"""
+	Aggregate time the container was throttled for in nanoseconds.
+	"""
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
