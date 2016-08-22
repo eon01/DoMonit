@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 from __future__ import division
 
-from api.containers import Containers
-from api.ids import Ids
-from api.inspect import Inspect
-from api.logs import Logs
-from api.process import Process
-from api.changes import Changes
-from api.stats import Stats
+from domonit.containers import Containers
+from domonit.ids import Ids
+from domonit.inspect import Inspect
+from domonit.logs import Logs
+from domonit.process import Process
+from domonit.changes import Changes
+from domonit.stats import Stats
 
 
 import json
