@@ -427,3 +427,4 @@ git branch -D my-new-feature
 # ToDo
 - Documentation
 - Exception & timeout handling
+- Unit testing
