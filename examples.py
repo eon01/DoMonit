@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
         # The number of times that a process of the cgroup triggered a "major fault"
         print ("\n#The number of times that a process of the cgroup triggered a major fault")
-        print sta.pgmajfault()
+        print sta.memory_stats_stats_pgmajfault()
   
 
         # Same output as ps aux in *nix
