@@ -37,10 +37,10 @@ if __name__ == "__main__":
         print ins.id()
 
         # Memory usage
-        mem_u = sta.usage()
+        mem_u = sta.memory_stats_usage()
 
         # Memory limit
-        mem_l = sta.limit()
+        mem_l = sta.memory_stats_limit()
 
         # Memory usage %
         print ("\n#Memory usage %")
