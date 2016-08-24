@@ -240,6 +240,10 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["total_mapped_file"] ) )
 
     def memory_stats_stats_mapped_file(self):
+    """
+    mapped_file indicates the amount of memory mapped by the processes in the control group. In my humble opinion, it doesn’t give you an information about how much memory is used; 
+    it rather tells you how it is used. https://blog.docker.com/2013/10/gathering-lxc-docker-containers-metrics
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -251,6 +255,16 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["mapped_file"] ) )
 
     def memory_stats_stats_pgfault(self):
+    """
+    pgfault and pgmajfault indicate the number of times that a process of the cgroup triggered a “page fault” and a “major fault”, respectively. 
+    A page fault happens when a process accesses a part of its virtual memory space which is inexistent or protected. 
+    The former can happen if the process is buggy and tries to access an invalid address (it will then be sent a SIGSEGV signal, typically killing it with the famous Segmentation fault message). 
+    The latter can happen when the process reads from a memory zone which has been swapped out, or which corresponds to a mapped file: in that case, the kernel will load the page from disk, 
+    and let the CPU complete the memory access. 
+    It can also happen when the process writes to a copy-on-write memory zone: 
+    likewise, the kernel will preempt the process, duplicate the memory page, and resume the write operation on the process’ own copy of the page. 
+    “Major” faults happen when the kernel actually has to read the data from disk. When it just has to duplicate an existing page, or allocate an empty page, it’s a regular (or “minor”) fault.
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -306,6 +320,10 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["rss_huge"] ) )
 
     def memory_stats_stats_cache(self):
+    """
+    cache is the amount of memory used by the processes of this control group that can be associated precisely with a block on a block device. When you read and write files from and to disk, this amount 
+    will increase. This will be the case if you use “conventional” I/O (open, read, write syscalls) as well as mapped files (with mmap). It also accounts for the memory used by tmpfs mounts. 
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -317,6 +335,10 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["cache"] ) )
 
     def memory_stats_stats_active_anon(self):
+    """
+    rss = active_anon + inactive_anon
+    The total amount of buffer or page cache memory, that is in active use. This is memory that has been recently used and is usually not reclaimed for other purposes.
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -328,6 +350,17 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["active_anon"] ) )
 
     def memory_stats_stats_pgmajfault(self):
+    """
+    pgfault and pgmajfault indicate the number of times that a process of the cgroup triggered a “page fault” and a “major fault”, respectively. 
+    A page fault happens when a process accesses a part of its virtual memory space which is inexistent or protected. 
+    The former can happen if the process is buggy and tries to access an invalid address (it will then be sent a SIGSEGV signal, typically killing it with the famous Segmentation fault message). 
+    The latter can happen when the process reads from a memory zone which has been swapped out, or which corresponds to a mapped file: in that case, the kernel will load the page from disk, 
+    and let the CPU complete the memory access. 
+    It can also happen when the process writes to a copy-on-write memory zone: 
+    likewise, the kernel will preempt the process, duplicate the memory page, and resume the write operation on the process’ own copy of the page. 
+    “Major” faults happen when the kernel actually has to read the data from disk. When it just has to duplicate an existing page, or allocate an empty page, it’s a regular (or “minor”) fault.
+    """
+
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -350,6 +383,12 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgpgout"] ) )
 
     def memory_stats_stats_pgpgout(self):
+    """
+    pgpgin and pgpgout are a bit tricky. If you are used to vmstat, you might think that they indicate the number of times that a page had to be read and written (respectively) by a process
+    of the cgroup, and that they should reflect both file I/O and swap activity. Wrong! In fact, they correspond to charging events. Each time a page is “charged” (=added to the accounting) 
+    to a cgroup, pgpgin increases. When a page is “uncharged” (=no longer “billed” to a cgroup), pgpgout increases.
+    """
+
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -405,6 +444,10 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgmajfault"] ) )
 
     def memory_stats_stats_total_inactive_anon(self):
+    """
+    rss = active_anon + inactive_anon
+    The total amount of buffer or page cache memory, that are free and available. This is memory that has not been recently used and can be reclaimed for other purposes.
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -460,6 +503,11 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["total_inactive_anon"] ) )
 
     def memory_stats_stats_inactive_file(self):
+    """
+    cache = active_file + inactive_file
+    Inactive memory is used when the system needs memory.
+    """
+
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -471,6 +519,12 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["inactive_file"] ) )
 
     def memory_stats_stats_pgpgin(self):
+    """
+    pgpgin and pgpgout are a bit tricky. If you are used to vmstat, you might think that they indicate the number of times that a page had to be read and written (respectively) by a process of the cgroup, 
+    and that they should reflect both file I/O and swap activity. Wrong! In fact, they correspond to charging events. Each time a page is “charged” (=added to the accounting) to a cgroup, 
+    pgpgin increases. When a page is “uncharged” (=no longer “billed” to a cgroup), pgpgout increases.
+    https://blog.docker.com/2013/10/gathering-lxc-docker-containers-metrics/
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -493,6 +547,9 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgpgin"] ) )
 
     def memory_stats_stats_rss(self):
+    """
+    RSS (resident set size) is data that belongs to a process: stacks, heaps, etc.
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -504,6 +561,9 @@ class Stats():
         return ('{}'.format( respj["memory_stats"]["stats"]["rss"] ) )
 
     def memory_stats_stats_active_file(self):
+    """
+    cache = active_file + inactive_file
+    """
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -547,7 +607,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["max_usage"] ) )
 
-    def usage(self):
+    def memory_stats_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -558,7 +618,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["usage"] ) )
 
-    def failcnt(self):
+    def memory_stats_failcnt(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -569,7 +629,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["failcnt"] ) )
 
-    def limit(self):
+    def memory_stats_limit(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
