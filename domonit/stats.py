@@ -173,7 +173,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"] ) )
 
-    def unevictable(self):
+    def memory_stats_stats_unevictable(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -184,7 +184,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["unevictable"] ) )
 
-    def total_inactive_file(self):
+    def memory_stats_stats_total_inactive_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -195,7 +195,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_inactive_file"] ) )
 
-    def total_rss_huge(self):
+    def memory_stats_stats_total_rss_huge(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -206,7 +206,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_rss_huge"] ) )
 
-    def writeback(self):
+    def memory_stats_stats_writeback(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -217,7 +217,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["writeback"] ) )
 
-    def total_cache(self):
+    def memory_stats_stats_total_cache(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -228,7 +228,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_cache"] ) )
 
-    def total_mapped_file(self):
+    def memory_stats_stats_total_mapped_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -239,7 +239,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_mapped_file"] ) )
 
-    def mapped_file(self):
+    def memory_stats_stats_mapped_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -250,7 +250,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["mapped_file"] ) )
 
-    def pgfault(self):
+    def memory_stats_stats_pgfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -261,7 +261,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["pgfault"] ) )
 
-    def total_writeback(self):
+    def memory_stats_stats_total_writeback(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -272,7 +272,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_writeback"] ) )
 
-    def hierarchical_memory_limit(self):
+    def memory_stats_stats_hierarchical_memory_limit(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -283,7 +283,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["hierarchical_memory_limit"] ) )
 
-    def total_active_file(self):
+    def memory_stats_stats_total_active_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -294,7 +294,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_active_file"] ) )
 
-    def rss_huge(self):
+    def memory_stats_stats_rss_huge(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -305,7 +305,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["rss_huge"] ) )
 
-    def cache(self):
+    def memory_stats_stats_cache(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -316,7 +316,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["cache"] ) )
 
-    def active_anon(self):
+    def memory_stats_stats_active_anon(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -327,7 +327,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["active_anon"] ) )
 
-    def pgmajfault(self):
+    def memory_stats_stats_pgmajfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -338,7 +338,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["pgmajfault"] ) )
 
-    def total_pgpgout(self):
+    def memory_stats_stats_total_pgpgout(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -349,7 +349,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgpgout"] ) )
 
-    def pgpgout(self):
+    def memory_stats_stats_pgpgout(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -360,7 +360,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["pgpgout"] ) )
 
-    def total_active_anon(self):
+    def memory_stats_stats_total_active_anon(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -371,7 +371,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_active_anon"] ) )
 
-    def total_unevictable(self):
+    def memory_stats_stats_total_unevictable(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -382,7 +382,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_unevictable"] ) )
 
-    def total_pgfault(self):
+    def memory_stats_stats_total_pgfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -393,7 +393,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgfault"] ) )
 
-    def total_pgmajfault(self):
+    def memory_stats_stats_total_pgmajfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -404,7 +404,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgmajfault"] ) )
 
-    def total_inactive_anon(self):
+    def memory_stats_stats_total_inactive_anon(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -415,7 +415,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_inactive_anon"] ) )
 
-    def total_unevictable(self):
+    def memory_stats_stats_total_unevictable(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -426,7 +426,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_unevictable"] ) )
 
-    def total_pgfault(self):
+    def memory_stats_stats_total_pgfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -437,7 +437,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgfault"] ) )
 
-    def total_pgmajfault(self):
+    def memory_stats_stats_total_pgmajfault(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -448,7 +448,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgmajfault"] ) )
 
-    def total_inactive_anon(self):
+    def memory_stats_stats_total_inactive_anon(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -459,7 +459,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_inactive_anon"] ) )
 
-    def inactive_file(self):
+    def memory_stats_stats_inactive_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -470,7 +470,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["inactive_file"] ) )
 
-    def pgpgin(self):
+    def memory_stats_stats_pgpgin(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -481,7 +481,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["pgpgin"] ) )
 
-    def total_pgpgin(self):
+    def memory_stats_stats_total_pgpgin(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -492,7 +492,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_pgpgin"] ) )
 
-    def rss(self):
+    def memory_stats_stats_rss(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -503,7 +503,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["rss"] ) )
 
-    def active_file(self):
+    def memory_stats_stats_active_file(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -514,7 +514,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["active_file"] ) )
 
-    def inactive_anon(self):
+    def memory_stats_stats_inactive_anon(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -525,7 +525,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["inactive_anon"] ) )
 
-    def total_rss(self):
+    def memory_stats_stats_total_rss(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
@@ -536,7 +536,7 @@ class Stats():
         respj = self.resp.json()
         return ('{}'.format( respj["memory_stats"]["stats"]["total_rss"] ) )
 
-    def max_usage(self):
+    def memory_stats_stats_max_usage(self):
         resp = self.resp
         url = self.url
         resp_status_code = resp.status_code
