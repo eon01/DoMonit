@@ -27,7 +27,7 @@ class Containers():
 
         resp_status_code = resp.status_code
         u.check_resp(resp_status_code, url)       
-        return json.loads(json.dumps(resp.json()))
+        return resp.json()
 
     def names(self, c_id):
         resp = self.resp

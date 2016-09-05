@@ -34,5 +34,4 @@ class Changes():
         resp_status_code = resp.status_code
         u.check_resp(resp_status_code, url)          
 
-        respj = self.resp.json()      
-        return('{}'.format( respj) )
+        return self.resp.json()
