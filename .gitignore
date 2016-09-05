@@ -95,4 +95,4 @@ ENV/
 domonit_init.py
 *.bak
 
-
+test.py
