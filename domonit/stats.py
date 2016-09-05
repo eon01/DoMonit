@@ -36,7 +36,7 @@ class Stats():
         u.check_resp(resp_status_code, url)
           
         respj = self.resp.json()      
-        return ('{}'.format( respj))            
+        return respj
             
     def read(self):
         resp = self.resp
