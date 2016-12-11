@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 from __future__ import division
 
 from domonit.containers import Containers
@@ -9,9 +10,7 @@ from domonit.process import Process
 from domonit.changes import Changes
 from domonit.stats import Stats
 
-
 import json
-
 
 c = Containers()
 i = Ids()
@@ -25,8 +24,6 @@ if __name__ == "__main__":
         ins = Inspect(c_id)
         sta = Stats(c_id)
         proc = Process(c_id, ps_args = "aux")
-
-
 
         # Container name
         print ("\n#Container name")
@@ -46,15 +43,10 @@ if __name__ == "__main__":
         print ("\n#Memory usage %")
         print  int(mem_u)*100/int(mem_l)
 
-
         # The number of times that a process of the cgroup triggered a "major fault"
         print ("\n#The number of times that a process of the cgroup triggered a major fault")
         print sta.memory_stats_stats_pgmajfault()
   
-
         # Same output as ps aux in *nix
         print("\n#Same output as ps aux in *nix")
         print proc.ps()
-
-
-

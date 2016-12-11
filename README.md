@@ -154,6 +154,40 @@ Number of containers is : 5
 ...etc
 ```
 
+
+# Testing Docker Events Stream Wrapper
+
+This is a simple example:
+
+```
+#!/usr/bin/env python
+
+from domonit.events import Events
+
+# Events is a stream of json sent by Docker API. In the Events class, we are only streaming in the same way the Docker events like Docker API make it.
+
+e = Events()
+events = e.events()
+
+for event in events:
+    print event
+```
+
+The event: 
+
+```
+{"Type":"network","Action":"create","Actor":{"ID":"a4a1ccb5c4a39ae64f46118e9e245b8cf516184571b7f7ccd6a406c20e735cb1","Attributes":{"name":"test","type":"bridge"}},"time":1481460602,"timeNano":1481460602475845939}
+```
+
+is reported by the network creation:
+
+```
+docker network create test
+```
+
+![](images/events.png)
+
+
 # DoMonit Functions
 
 For better uderstanfing and visibility, I used Python ```dir()``` here to list the different functions of every class under ```api/*```
