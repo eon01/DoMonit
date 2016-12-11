@@ -188,6 +188,9 @@ Logs()
 Changes()
 ['__doc__', '__init__', '__module__', 'base', 'changes', 'container_id', 'resp', 'session', 'url']
 
+Events()
+['__doc__', '__init__', '__module__', 'base', 'events', 'resp', 'session', 'url']
+
 ```
 
 

@@ -8,6 +8,7 @@ from domonit.logs import Logs
 from domonit.process import Process
 from domonit.changes import Changes
 from domonit.stats import Stats
+from domonit.events import Events
 
 
 import json
@@ -52,3 +53,8 @@ if __name__ == "__main__":
         print("Changes()")
         print dir(cha)
 	print("\n")
+
+eve = Events()
+print("Events()")
+print dir(eve)
+print("\n")
