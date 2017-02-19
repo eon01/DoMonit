@@ -447,6 +447,15 @@ git checkout -b my-new-feature
 ```
 git add .
 git commit -m 'Your detailed description'
+```
+
+- If the remote repos (the forked one) is not set, type:
+```
+git remote set-url origin https://github.com/<your_username>/DoMonit
+```
+- Push changes:
+
+```
 git push origin my-new-feature
 ```
 - Submit a pull request
