@@ -1,5 +1,5 @@
 pathlib==1.0.1
-PyYAML==3.11
+PyYAML==5.4
 requests==2.10.0
 requests-unixsocket==0.1.5
 simplejson==3.8.2
